@@ -28,11 +28,10 @@ module.exports = function (grunt) {
             }
         },
         bump: {
-            scripts: {
+            options: {
                 files: ['package.json', 'bower.json'],
                 commitFiles: ['-a'],
-                push: false,
-                pushTo: 'origin'
+                push: false
             }
         }
     });
