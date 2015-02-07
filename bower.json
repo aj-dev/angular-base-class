@@ -29,7 +29,8 @@
     "bower_components",
     "test",
     "karma.conf.js",
-    "gruntfile.js"
+    "gruntfile.js",
+    ".gitignore"
   ],
   "dependencies": {
     "angular": "^1.2.0"
