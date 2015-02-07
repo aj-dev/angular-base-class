@@ -5,10 +5,13 @@ An AngularJS factory for simple class based inheritance
 
 ## Table of contents
 1. [Key features](#key-features)
-2. [Usage](#usage)
+2. [Installation](#installation)
+3. [Usage](#usage)
 	- [Default constructor](#default-constructor)
 	- [Custom constructor](#custom-constructor)
 	- [With mixins](#with-mixins)
+4. [Running tests](#running-tests)
+5. [Credits](#credits)
 
 ## Key features
 - Constructor definition is optional
@@ -16,6 +19,9 @@ An AngularJS factory for simple class based inheritance
 - Supports multiple inheritance by resolving correct ```this``` context in ```super()``` calls
 - Mixins can be injected and used by adding them to ```.mixins: []```
 - Compatible with AngularJS 1.2.x and 1.3.x
+
+## Installation
+- ```bower install angular-class --save```
 
 ## Usage
 - Include angular-base-class.min.js in your project
@@ -113,3 +119,13 @@ angular.module('app', ['BaseClass'])
 		});
 	}]);
 ```
+
+## Running tests
+- Get the source code
+- ```npm-install```
+- ```grunt test```
+
+## Credits
+When creating this repo some ideas were borrowed from the following:
+- Axel Rauschmayer - http://www.2ality.com/
+- http://backbonejs.org/  
