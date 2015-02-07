@@ -26,6 +26,13 @@ module.exports = function (grunt) {
 					'dist/angular-base-class.min.js': 'src/angular-base-class.js'
 				}
 			}
+		},
+		bump: {
+			scripts: {
+				files: ['package.json', 'bower.json'],
+				commitFiles: ['-a'],
+				push: false
+			}
 		}
 	});
 
