@@ -1,42 +1,42 @@
 {
-  "name": "angular-base-class",
-  "version": "0.0.1",
-  "description": "An AngularJS service for class creation with prototypical inheritance and mixins.",
-  "authors": [
-    "aj-dev <reskogitas@gmail.com>"
-  ],
-  "main": "angular-base-class.js",
-  "moduleType": [
-    "globals"
-  ],
-  "keywords": [
-    "angular",
-    "angularjs",
-    "angular-service",
-    "angular-model",
-    "base-class",
-    "class",
-    "base",
-    "OOP",
-    "inheritance",
-    "mixin"
-  ],
-  "license": "MIT",
-  "homepage": "https://github.com/aj-dev/angular-base-class",
-  "ignore": [
-  	"src",
-    "node_modules",
-    "package.json",
-    "bower_components",
-    "test",
-    "karma.conf.js",
-    "gruntfile.js",
-    ".gitignore"
-  ],
-  "dependencies": {
-    "angular": "^1.2.0"
-  },
-  "devDependencies": {
-    "angular-mocks": "^1.2.0"
-  }
+    "name": "angular-base-class",
+    "version": "0.0.1",
+    "description": "An AngularJS service for class creation with prototypical inheritance and mixins.",
+    "authors": [
+        "aj-dev <reskogitas@gmail.com>"
+    ],
+    "main": "angular-base-class.js",
+    "moduleType": [
+        "globals"
+    ],
+    "keywords": [
+        "angular",
+        "angularjs",
+        "angular-service",
+        "angular-model",
+        "base-class",
+        "class",
+        "base",
+        "OOP",
+        "inheritance",
+        "mixin"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/aj-dev/angular-base-class",
+    "ignore": [
+        "src",
+        "node_modules",
+        "package.json",
+        "bower_components",
+        "test",
+        "karma.conf.js",
+        "gruntfile.js",
+        ".gitignore"
+    ],
+    "dependencies": {
+        "angular": "^1.2.0"
+    },
+    "devDependencies": {
+        "angular-mocks": "^1.2.0"
+    }
 }
