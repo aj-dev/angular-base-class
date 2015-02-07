@@ -6,7 +6,7 @@ angular.module('BaseClass', [])
 		var findObjectOfProperty = function (start, propName) {
 			while (true) {
 				if (!start) {
-					throw Error('Could not find property ' + propName);
+					throw Error('Could not find property "' + propName + '"');
 				}
 
 				if (start.hasOwnProperty(propName)) {
@@ -19,6 +19,10 @@ angular.module('BaseClass', [])
 
 		// BaseClass constructor
 		var BaseClass = function (attributes) {
+			if (!angular.isObject(attributes)) {
+				throw Error('arguments provided to constructor must be a key/value pair object!');
+			}
+
 			angular.extend(this, attributes);
 		};
 

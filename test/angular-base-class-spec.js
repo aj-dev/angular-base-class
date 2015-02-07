@@ -123,9 +123,17 @@ describe('BaseClass', function () {
 		});
 	});
 
-	it('should throw error when calling non-existent super method', function () {
-		expect(function () {
-			womanInstance.find();
-		}).toThrowError('Could not find property find');
+	describe('error handling', function () {
+		it('should throw error when calling non-existent super method', function () {
+			expect(function () {
+				womanInstance.find();
+			}).toThrowError('Could not find property "find"');
+		});
+
+		it('should throw error when "attributes" provided to constructor is not an object', function () {
+			expect(function () {
+				var alienInstance = new Human('alien');
+			}).toThrowError('arguments provided to constructor must be a key/value pair object!');
+		});
 	});
 });

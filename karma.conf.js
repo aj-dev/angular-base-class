@@ -25,6 +25,10 @@ module.exports = function (config) {
 
         coverageReporter: {
             reporters: [
+            	{
+            		type: 'html',
+            		dir: 'coverage'
+            	},
                 {
                     type: 'text-summary'
                 }

@@ -50,6 +50,12 @@ angular.module('app', ['BaseClass'])
 				return 'Dog is ' + this._super('getAge') + ' years old';
 			}
 		})
+	}])
+	.controller('Ctrl', ['$sope', 'Dog', function ($scope, Dog) {
+		$scope.dog = new Dog({age: 5});
+		$scope.dog.getAge(); // Dog is 5 years old
+		$scope.dog.setAge(8);
+		$scope.dog.getAge(); // Dog is 18 years old
 	}]);
 ```
 
@@ -58,8 +64,8 @@ angular.module('app', ['BaseClass'])
 angular.module('app', ['BaseClass'])
 	.factory('Mammal', function (BaseClass) {
 		return BaseClass.extend({
-			constructor: function (age) {
-				this.age = age;
+			constructor: function (args) {
+				this.age = args.age + 1;
 			},
 			setAge: function (age) {
 				this.age = age;
@@ -81,6 +87,12 @@ angular.module('app', ['BaseClass'])
 				return 'Dog is ' + this._super('getAge') + ' years old';
 			},
 		})
+	}])
+	.controller('Ctrl', ['$sope', 'Dog', function ($scope, Dog) {
+		$scope.dog = new Dog({age: 5});
+		$scope.dog.getAge(); // Dog is 6 years old
+		$scope.dog.setAge(8);
+		$scope.dog.getAge(); // Dog is 18 years old
 	}]);
 ```
 
@@ -99,9 +111,9 @@ angular.module('app', ['BaseClass'])
 	});
 	.factory('Mammal', ['BaseClass', 'MammalMixin', function (BaseClass, mammalMixin) {
 		return BaseClass.extend({
-			constructor: function (name, age) {
-				this.name = name;
-				this.age = age;
+			constructor: function (args) {
+				this.name = args.name;
+				this.age = args.age;
 			},
 			setAge: function (age) {
 				this.age = age;
@@ -118,6 +130,17 @@ angular.module('app', ['BaseClass'])
 				return 'Age: ' + this.getAge() + ' Name: ' + this.getName();
 			}
 		});
+	}])
+	.controller('Ctrl', ['$sope', 'Cat', function ($scope, Cat) {
+		$scope.dog = new Cat({name: 'Meow', age: 5});
+		$scope.dog.getAge(); // 5
+		$scope.dog.setAge(8);
+		$scope.dog.getAge(); // 8
+		$scope.dog.getName(); // Meow
+		$scope.dog.getAgeAndName(); // Age: 8 Name: Meow
+		$scope.dog.grow(2);
+		$scope.dog.getAge(); // 10
+
 	}]);
 ```
 
