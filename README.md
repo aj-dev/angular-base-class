@@ -12,6 +12,7 @@ An AngularJS factory for simple class based inheritance
 	- [With mixins](#with-mixins)
 4. [Running tests](#running-tests)
 5. [Credits](#credits)
+6. [License](#license)
 
 ## Key features
 - Constructor definition is optional
@@ -126,6 +127,9 @@ angular.module('app', ['BaseClass'])
 - ```grunt test```
 
 ## Credits
-When creating this repo some ideas were borrowed from the following:
+Some ideas were borrowed from the following:
 - Axel Rauschmayer - http://www.2ality.com/
-- http://backbonejs.org/  
+- http://backbonejs.org/
+
+## License
+Licensed under the MIT license. Copyright (c) 2015 Audrius Jakumavicius
