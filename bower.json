@@ -23,11 +23,13 @@
   "license": "MIT",
   "homepage": "https://github.com/aj-dev/angular-base-class",
   "ignore": [
+  	"src",
     "node_modules",
     "package.json",
-    "gulpfile.js",
     "bower_components",
-    "test"
+    "test",
+    "karma.conf.js",
+    "gruntfile.js"
   ],
   "dependencies": {
     "angular": "^1.2.0"
