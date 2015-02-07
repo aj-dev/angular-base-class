@@ -1,6 +1,5 @@
 angular.module('BaseClass', [])
     .factory('BaseClass', function () {
-
         'use strict';
 
         var findObjectOfProperty = function (start, propName) {
@@ -27,7 +26,6 @@ angular.module('BaseClass', [])
         };
 
         BaseClass.extend = function (properties) {
-
             var Class = this,
                 SubClass;
 
@@ -79,7 +77,6 @@ angular.module('BaseClass', [])
             angular.extend(SubClass.prototype, properties); // Extends SubClass prototype with supplied properties.
 
             if (Array.isArray(properties.mixins)) { // Add any mixin methods to SubClass prototype.
-
                 properties.mixins.forEach(function (mixin) {
                     for (var prop in mixin) {
                         if (angular.isFunction(mixin[prop]) && angular.isUndefined(SubClass.prototype[prop])) {
