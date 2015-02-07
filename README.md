@@ -21,7 +21,7 @@ An AngularJS factory for simple class based inheritance
 - Compatible with AngularJS 1.2.x and 1.3.x
 
 ## Installation
-- ```bower install angular-class --save```
+- ```bower install angular-base-class --save```
 
 ## Usage
 - Include angular-base-class.min.js in your project
@@ -122,7 +122,7 @@ angular.module('app', ['BaseClass'])
 
 ## Running tests
 - Get the source code
-- ```npm-install```
+- ```npm install```
 - ```grunt test```
 
 ## Credits
