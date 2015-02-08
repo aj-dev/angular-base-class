@@ -18,7 +18,7 @@ angular.module('BaseClass', [])
 
         // BaseClass constructor
         var BaseClass = function (attributes) {
-            if (!angular.isObject(attributes)) {
+            if (!angular.isUndefined(attributes) && !angular.isObject(attributes)) {
                 throw Error('arguments provided to constructor must be a key/value pair object!');
             }
 
