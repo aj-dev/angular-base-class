@@ -19,6 +19,7 @@ An AngularJS factory for simple class based inheritance
 - Uses ```this._super('methodName', arguments)``` to call super class methods
 - Supports multiple inheritance by resolving correct ```this``` context in ```super()``` calls
 - Mixins can be injected and used by adding them to ```mixins: []```
+- Does not override inheritted mixins
 - Compatible with AngularJS 1.2.x and 1.3.x
 
 ## Installation
