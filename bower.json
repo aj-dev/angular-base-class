@@ -24,7 +24,6 @@
     "license": "MIT",
     "homepage": "https://github.com/aj-dev/angular-base-class",
     "ignore": [
-        "src",
         "node_modules",
         "package.json",
         "bower_components",
