@@ -19,7 +19,7 @@ An AngularJS factory for simple class based inheritance
 - Uses ```this._super('methodName', arguments)``` to call super class methods
 - Supports multiple inheritance by resolving correct ```this``` context in ```super()``` calls
 - Mixins can be injected and used by adding them to ```mixins: []```
-- Does not override inheritted mixins
+- Does not override inherited mixins
 - Compatible with AngularJS 1.2.x and 1.3.x
 
 ## Installation
@@ -31,8 +31,8 @@ An AngularJS factory for simple class based inheritance
 
 ##### Default constructor
 ```js
-angular.module('app', ['BaseClass'])
-	.factory('Mammal', function (BaseClass) {
+angular.module('App', ['BaseClass'])
+	.factory('Mammal', ['BaseClass', function (BaseClass) {
 		return BaseClass.extend({
 			setAge: function (age) {
 				this.age = age;
@@ -41,7 +41,7 @@ angular.module('app', ['BaseClass'])
 				return this.age;
 			}
 		});
-	})
+	}])
 	.factory('Dog', ['Mammal', function (Mammal) {
 		return Mammal.extend({
 			setAge: function (age) {
@@ -52,7 +52,7 @@ angular.module('app', ['BaseClass'])
 			}
 		})
 	}])
-	.controller('Ctrl', ['$sope', 'Dog', function ($scope, Dog) {
+	.controller('Ctrl', ['$scope', 'Dog', function ($scope, Dog) {
 		$scope.dog = new Dog({age: 5});
 		$scope.dog.getAge(); // Dog is 5 years old
 		$scope.dog.setAge(8);
@@ -62,8 +62,8 @@ angular.module('app', ['BaseClass'])
 
 ##### Custom constructor
 ```js
-angular.module('app', ['BaseClass'])
-	.factory('Mammal', function (BaseClass) {
+angular.module('App', ['BaseClass'])
+	.factory('Mammal', ['BaseClass', function (BaseClass) {
 		return BaseClass.extend({
 			constructor: function (args) {
 				this.age = args.age + 1;
@@ -75,7 +75,7 @@ angular.module('app', ['BaseClass'])
 				return this.age;
 			}
 		});
-	})
+	}])
 	.factory('Dog', ['Mammal', function (Mammal) {
 		return Mammal.extend({
 			constructor: function () {
@@ -89,7 +89,7 @@ angular.module('app', ['BaseClass'])
 			},
 		})
 	}])
-	.controller('Ctrl', ['$sope', 'Dog', function ($scope, Dog) {
+	.controller('Ctrl', ['$scope', 'Dog', function ($scope, Dog) {
 		$scope.dog = new Dog({age: 5});
 		$scope.dog.getAge(); // Dog is 6 years old
 		$scope.dog.setAge(8);
@@ -99,8 +99,8 @@ angular.module('app', ['BaseClass'])
 
 ##### With mixins
 ```js
-angular.module('app', ['BaseClass'])
-	.factory('MammalMixin', function () {
+angular.module('App', ['BaseClass'])
+	.factory('MammalMixin', [function () {
 		return {
 			grow: function (number) {
 				this.age += number;
@@ -109,7 +109,7 @@ angular.module('app', ['BaseClass'])
 				return this.name;
 			}
 		};
-	});
+	}]);
 	.factory('Mammal', ['BaseClass', 'MammalMixin', function (BaseClass, mammalMixin) {
 		return BaseClass.extend({
 			constructor: function (args) {
@@ -132,7 +132,7 @@ angular.module('app', ['BaseClass'])
 			}
 		});
 	}])
-	.controller('Ctrl', ['$sope', 'Cat', function ($scope, Cat) {
+	.controller('Ctrl', ['$scope', 'Cat', function ($scope, Cat) {
 		$scope.dog = new Cat({name: 'Meow', age: 5});
 		$scope.dog.getAge(); // 5
 		$scope.dog.setAge(8);
