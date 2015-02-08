@@ -11,6 +11,9 @@ angular.module('App', ['BaseClass'])
 	}])
 	.factory('Dog', ['Mammal', function (Mammal) {
 		return Mammal.extend({
+			constructor: function () {
+				this._super('constructor', arguments);
+			},
 			setAge: function (age) {
 				this._super('setAge', age + 10);
 			},
@@ -32,7 +35,7 @@ angular.module('App', ['BaseClass'])
 	.factory('Cat', ['Mammal', 'MammalMixin', function (Mammal, mammalMixin) {
 		return Mammal.extend({
 			constructor: function (args) {
-				this._super('constructor', arguments);
+				this._super('constructor', args);
 				this.name = args.name
 			},
 			mixins: [mammalMixin]
