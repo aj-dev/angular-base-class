@@ -3,17 +3,17 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    // load all grunt tasks matching the 'grunt-*' pattern
+    // Load all grunt tasks matching the 'grunt-*' pattern.
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         karma: {
             unit: {
-                configFile: 'karma.conf.js',
+                configFile: 'config/karma.conf.js',
                 singleRun: true
             },
             auto: {
-                configFile: 'karma.conf.js',
+                configFile: 'config/karma.conf.js',
                 autoWatch: true
             }
         },
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    'dist/angular-base-class.min.js': 'src/angular-base-class.js'
+                    'angular-base-class.min.js': 'angular-base-class.js'
                 }
             }
         },
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         }
     });
 
-    // Load all modules from package.json which name starts with 'grunt-'. Very helpful to avoid having to loadNpmTasks for every grunt module
+    // Load all modules from package.json matching the pattern 'grunt-*'. Very helpful to avoid having to loadNpmTasks for every grunt module.
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.registerTask('test', ['karma:unit']);
