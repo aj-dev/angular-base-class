@@ -61,7 +61,7 @@ angular.module('BaseClass', [])
 
                         this[__super] = superObject;
 
-                        args = (Array.isArray(args) || angular.isObject(args)) ? args : [args];
+                        args = (args && args.hasOwnProperty('length')) ? Array.prototype.slice.call(args) : [args];
 
                         returnValue = superObject[method].apply(this, args);
 

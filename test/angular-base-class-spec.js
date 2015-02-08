@@ -24,6 +24,9 @@ describe('BaseClass', function () {
 					this.isYoung = true;
 				}
 			},
+			setAge: function (number) {
+				this.age = number;
+			},
 			mixins: [{
 				getNameLength: function () {
 					return this.name.length;
@@ -34,6 +37,9 @@ describe('BaseClass', function () {
 		Woman = Man.extend({
 			constructor: function () {
 				this._super('constructor', arguments);
+			},
+			setAge: function (number) {
+				this._super('setAge', number);
 			},
 			isFemale: function () {
 				return this.sex === 'female';
@@ -109,6 +115,18 @@ describe('BaseClass', function () {
 		it('should also call `_super` constructor of the ancestor class', function () {
 			expect(manInstance.name).toEqual('John');
 			expect(manInstance.age).toEqual(40);
+		});
+	});
+
+	describe('when Woman instane is created', function () {
+		it('should inherit Man\'s constructor', function () {
+			expect(womanInstance.isYoung).toBe(false);
+		});
+
+		it('should also call `_super` method of the ancestor class', function () {
+			womanInstance.setAge(25);
+
+			expect(womanInstance.getAge()).toEqual(25);
 		});
 	});
 
