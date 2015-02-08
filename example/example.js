@@ -20,7 +20,7 @@ angular.module('App', ['BaseClass'])
 			getAge: function () {
 				return 'Dog is ' + this._super('getAge') + ' years old';
 			}
-		})
+		});
 	}])
 	.factory('MammalMixin', [function () {
 		return {
@@ -36,10 +36,10 @@ angular.module('App', ['BaseClass'])
 		return Mammal.extend({
 			constructor: function (args) {
 				this._super('constructor', args);
-				this.name = args.name
+				this.name = args.name;
 			},
 			mixins: [mammalMixin]
-		})
+		});
 	}])
 	.controller('Ctrl', ['$scope', 'Dog', 'Cat', function ($scope, Dog, Cat) {
 		$scope.dog = new Dog({age: 3, name: 'Max'});

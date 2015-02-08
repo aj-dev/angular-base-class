@@ -34,7 +34,7 @@ angular.module('BaseClass', [])
             } else {
                 SubClass = function () {
                     return Class.apply(this, arguments);
-                }
+                };
             }
 
             SubClass.extend = Class.extend;
