@@ -61,6 +61,8 @@ angular.module('BaseClass', [])
 
                         this[__super] = superObject;
 
+                        args = (Array.isArray(args) || angular.isObject(args)) ? args : [args];
+
                         returnValue = superObject[method].apply(this, args);
 
                         if (previousSuper) {
