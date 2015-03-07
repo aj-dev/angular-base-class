@@ -1,5 +1,5 @@
 # angular-base-class
-[![Build Status](https://travis-ci.org/aj-dev/angular-base-class.svg?branch=master)](https://travis-ci.org/aj-dev/angular-base-class) [![Dependencies](https://david-dm.org/aj-dev/angular-base-class.svg)](https://david-dm.org/aj-dev/angular-base-class#info=dependencies&view=table) [![DevDependencies](https://david-dm.org/aj-dev/angular-base-class/dev-status.svg)](https://david-dm.org/aj-dev/angular-base-class#info=devDependencies&view=table)
+[![Build Status](https://travis-ci.org/aj-dev/angular-base-class.svg?branch=master)](https://travis-ci.org/aj-dev/angular-base-class) [![Dependencies](https://david-dm.org/aj-dev/angular-base-class.svg)](https://david-dm.org/aj-dev/angular-base-class#info=dependencies&view=table) [![DevDependencies](https://david-dm.org/aj-dev/angular-base-class/dev-status.svg)](https://david-dm.org/aj-dev/angular-base-class#info=devDependencies&view=table) [![Coverage Status](https://coveralls.io/repos/aj-dev/angular-base-class/badge.svg)](https://coveralls.io/r/aj-dev/angular-base-class)
 
 An AngularJS factory for simple class based inheritance
 

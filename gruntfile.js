@@ -18,6 +18,15 @@ module.exports = function (grunt) {
                 autoWatch: true
             }
         },
+        coveralls: {
+            options: {
+                debug: false,
+                coverageDir: 'coverage',
+                dryRun: false,
+                force: true,
+                recursive: true
+            }
+        },
         uglify: {
             options: {
                 mangle: true
