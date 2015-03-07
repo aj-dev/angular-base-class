@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>angular-base-class</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
-	<script type="text/javascript" src="../angular-base-class.js"></script>
-	<script type="text/javascript" src="example.js"></script>
+    <meta charset="UTF-8">
+    <title>angular-base-class</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../angular-base-class.js"></script>
+    <script type="text/javascript" src="example.js"></script>
 </head>
 <body ng-app="App">
-	<div ng-controller="Ctrl">
-		<h3>Dog</h3>
-		<div class="row">dog: {{dog}} <span class="comment">// Calling Mammal constructor which uses default BaseClass constructor</span></div>
-		<div class="row">dog.setAge(8): {{dog.setAge(8)}}</div>
-		<div class="row">dog.getAge(): {{dog.getAge()}}</div>
+    <div ng-controller="Ctrl">
+        <h3>Dog</h3>
+        <div class="row">dog: {{dog}} <span class="comment">// Calling Mammal constructor which uses default BaseClass constructor</span></div>
+        <div class="row">dog.setAge(8): {{dog.setAge(8)}}</div>
+        <div class="row">dog.getAge(): {{dog.getAge()}}</div>
 
-		<h3>Cat1</h3>
-		<div class="row">cat1: {{cat1}} <span class="comment">// Using constructor inherited from Dog + own constructor</span></div>
-		<div class="row">cat1.getName(): {{cat1.getName()}} <span class="comment">// Using 'getName()' method from MammalMixin</span></div>
-		<div class="row">cat1.getAge(): {{cat1.getAge()}} <span class="comment">// Using 'grow()' method from MammalMixin and 'getAge()' method inherited from Dog</span>
-			<button ng-click="cat1.grow(5)">cat1.grow(5)</button>
-		</div>
+        <h3>Cat1</h3>
+        <div class="row">cat1: {{cat1}} <span class="comment">// Using constructor inherited from Dog + own constructor</span></div>
+        <div class="row">cat1.getName(): {{cat1.getName()}} <span class="comment">// Using 'getName()' method from MammalMixin</span></div>
+        <div class="row">cat1.getAge(): {{cat1.getAge()}} <span class="comment">// Using 'grow()' method from MammalMixin and 'getAge()' method inherited from Dog</span>
+            <button ng-click="cat1.grow(5)">cat1.grow(5)</button>
+        </div>
 
-		<h3>Cat2</h3>
-		<div class="row">cat2: {{cat2}} <span class="comment">// Using constructor inherited from Dog + own constructor</span></div>
-		<div class="row">cat2.getName(): {{cat2.getName()}} <span class="comment">// Using 'getName()' method from MammalMixin</span></div>
-		<div class="row">cat2.getAge(): {{cat2.getAge()}} <span class="comment">// Using 'grow()' method from MammalMixin and 'getAge()' method inherited from Dog</span>
-			<button ng-click="cat2.grow(5)">cat2.grow(5)</button>
-		</div>
-	</div>
+        <h3>Cat2</h3>
+        <div class="row">cat2: {{cat2}} <span class="comment">// Using constructor inherited from Dog + own constructor</span></div>
+        <div class="row">cat2.getName(): {{cat2.getName()}} <span class="comment">// Using 'getName()' method from MammalMixin</span></div>
+        <div class="row">cat2.getAge(): {{cat2.getAge()}} <span class="comment">// Using 'grow()' method from MammalMixin and 'getAge()' method inherited from Dog</span>
+            <button ng-click="cat2.grow(5)">cat2.grow(5)</button>
+        </div>
+    </div>
 </body>
 </html>
