@@ -32,12 +32,13 @@
         "test",
         "package.json",
         "gruntfile.js",
-        ".gitignore"
+        ".gitignore",
+        ".gitattributes",
+        ".travis.yml"
     ],
-    "dependencies": {
-        "angular": "^1.2.0"
-    },
+    "dependencies": {},
     "devDependencies": {
+        "angular": "^1.2.0",
         "angular-mocks": "^1.2.0"
     }
 }
