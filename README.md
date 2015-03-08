@@ -1,7 +1,7 @@
 # angular-base-class
-[![Build Status](https://travis-ci.org/aj-dev/angular-base-class.svg?branch=master)](https://travis-ci.org/aj-dev/angular-base-class) [![Dependencies](https://david-dm.org/aj-dev/angular-base-class.svg)](https://david-dm.org/aj-dev/angular-base-class#info=dependencies&view=table) [![DevDependencies](https://david-dm.org/aj-dev/angular-base-class/dev-status.svg)](https://david-dm.org/aj-dev/angular-base-class#info=devDependencies&view=table) [![Coverage Status](https://coveralls.io/repos/aj-dev/angular-base-class/badge.svg)](https://coveralls.io/r/aj-dev/angular-base-class)
+[![Build Status](https://travis-ci.org/aj-dev/angular-base-class.svg?branch=master)](https://travis-ci.org/aj-dev/angular-base-class) [![Dependencies](https://david-dm.org/aj-dev/angular-base-class.svg)](https://david-dm.org/aj-dev/angular-base-class#info=dependencies&view=table) [![DevDependencies](https://david-dm.org/aj-dev/angular-base-class/dev-status.svg)](https://david-dm.org/aj-dev/angular-base-class#info=devDependencies&view=table) [![Coverage Status](https://coveralls.io/repos/aj-dev/angular-base-class/badge.svg)](https://coveralls.io/r/aj-dev/angular-base-class) [![npm](https://img.shields.io/npm/dm/angular-base-class.svg)](https://www.npmjs.com/package/angular-base-class)
 
-An AngularJS factory for simple class based inheritance
+An AngularJS factory for simple class based inheritance with support for mixins
 
 ## Table of contents
 1. [Key features](#key-features)
@@ -100,7 +100,7 @@ angular.module('App', ['BaseClass'])
 ##### With mixins
 ```js
 angular.module('App', ['BaseClass'])
-	.factory('MammalMixin', [function () {
+	.factory('mammalMixin', [function () {
 		return {
 			grow: function (number) {
 				this.age += number;
@@ -110,7 +110,7 @@ angular.module('App', ['BaseClass'])
 			}
 		};
 	}]);
-	.factory('Mammal', ['BaseClass', 'MammalMixin', function (BaseClass, mammalMixin) {
+	.factory('Mammal', ['BaseClass', 'mammalMixin', function (BaseClass, mammalMixin) {
 		return BaseClass.extend({
 			constructor: function (args) {
 				this.name = args.name;
