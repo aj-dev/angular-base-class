@@ -1,6 +1,6 @@
 {
     "name": "angular-base-class",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "An AngularJS service for class creation with prototypical inheritance and mixins.",
     "authors": [
         "aj-dev <reskogitas@gmail.com>"
