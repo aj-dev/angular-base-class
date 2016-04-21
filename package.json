@@ -3,7 +3,7 @@
         "test": "test"
     },
     "name": "angular-base-class",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "An AngularJS service for class creation with prototypical inheritance and mixins.",
     "author": "Audrius Jakumavicius",
     "license": "MIT",
