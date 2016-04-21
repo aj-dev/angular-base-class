@@ -1,5 +1,5 @@
 // CommonJS package manager support
-if (typeof module !== undefined && typeof exports !== undefined && module.exports === exports) {
+if (typeof module === 'object' && module.exports) {
     module.exports = 'BaseClass';
 }
 
