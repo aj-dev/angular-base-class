@@ -20,7 +20,7 @@ An AngularJS factory for simple class based inheritance with support for mixins
 - Supports multiple inheritance by resolving correct ```this``` context in ```super()``` calls
 - Mixins can be injected and used by adding them to ```mixins: []```
 - Does not override inherited mixins
-- Compatible with AngularJS 1.2.x and 1.3.x
+- Compatible with AngularJS 1.2.x - 1.5.x
 
 ## Installation
 - ```bower install angular-base-class --save```
@@ -146,14 +146,14 @@ angular.module('App', ['BaseClass'])
 ```
 
 ## Running tests
-- Get the source code
-- ```npm install```
-- ```grunt test```
+- Get the source code and in project root directory:
+	- ```npm install```
+	- ```npm run test```
 
 ## Credits
-Some ideas were borrowed from the following:
-- Axel Rauschmayer - http://www.2ality.com/
-- http://backbonejs.org/
+- Some ideas were borrowed from the following:
+	- Axel Rauschmayer - http://www.2ality.com/
+	- http://backbonejs.org/
 
 ## License
-Licensed under the MIT license. Copyright (c) 2015 Audrius Jakumavicius
+Licensed under the MIT license. Copyright (c) 2015 - 2016 Audrius Jakumavicius
