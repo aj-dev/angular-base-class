@@ -8,6 +8,14 @@
     "author": "Audrius Jakumavicius",
     "license": "MIT",
     "main": "angular-base-class.js",
+    "files": [
+        "example",
+        "angular-base-class.js",
+        "angular-base-class.min.js",
+        "package.json",
+        "LICENSE",
+        "README.md"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/aj-dev/angular-base-class"
@@ -15,9 +23,11 @@
     "bugs": {
         "url": "https://github.com/aj-dev/angular-base-class/issues"
     },
-    "dependencies": {},
+    "dependencies": {
+        "angular": "^1.5.5"
+    },
     "devDependencies": {
-        "bower": "^1.7.9",
+        "angular-mocks": "^1.5.5",
         "grunt": "^1.0.1",
         "grunt-bump": "^0.8.0",
         "grunt-contrib-uglify": "^1.0.1",
@@ -33,7 +43,6 @@
         "phantomjs-prebuilt": "2.1.7"
     },
     "scripts": {
-        "postinstall": "node_modules/.bin/bower install",
-        "test": "grunt test && grunt coveralls"
+        "test": "npm test && grunt coveralls"
     }
 }

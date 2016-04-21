@@ -23,7 +23,12 @@ An AngularJS factory for simple class based inheritance with support for mixins
 - Compatible with AngularJS 1.2.x - 1.5.x
 
 ## Installation
-- ```bower install angular-base-class --save```
+- npm
+	- ```npm i angular-base-class --save```
+	- include a reference to node_modules/angular-base-class/angular-base-class.js
+- bower
+	- ```bower install angular-base-class --save```
+	- include a reference to bower_components/angular-base-class/angular-base-class.js
 
 ## Usage
 - Include angular-base-class.min.js in your project

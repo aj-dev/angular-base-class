@@ -24,7 +24,6 @@
     "license": "MIT",
     "homepage": "https://github.com/aj-dev/angular-base-class",
     "ignore": [
-        "bower_components",
         "node_modules",
         "coverage",
         "example",
@@ -35,10 +34,5 @@
         ".gitignore",
         ".gitattributes",
         ".travis.yml"
-    ],
-    "dependencies": {},
-    "devDependencies": {
-        "angular": "^1.5.5",
-        "angular-mocks": "^1.5.5"
-    }
+    ]
 }

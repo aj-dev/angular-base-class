@@ -1,3 +1,8 @@
+// CommonJS package manager support
+if (typeof module !== undefined && typeof exports !== undefined && module.exports === exports) {
+    module.exports = 'BaseClass';
+}
+
 angular.module('BaseClass', [])
     .factory('BaseClass', function () {
         'use strict';
