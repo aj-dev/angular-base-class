@@ -36,7 +36,7 @@
         "jasmine-core": "2.4.1",
         "karma": "^1.1.1",
         "karma-coverage": "^1.1.0",
-        "karma-jasmine": "^1.0.2",
+        "karma-jasmine": "^4.0.1",
         "karma-phantomjs-launcher": "^1.0.1",
         "load-grunt-tasks": "^3.5.0",
         "matchdep": "^1.0.1",
