@@ -40,7 +40,7 @@
         "karma-phantomjs-launcher": "^1.0.1",
         "load-grunt-tasks": "^3.5.0",
         "matchdep": "^1.0.1",
-        "phantomjs-prebuilt": "2.1.7"
+        "phantomjs-prebuilt": "2.1.16"
     },
     "scripts": {
         "test": "grunt test && grunt coveralls"
