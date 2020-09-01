@@ -39,7 +39,7 @@
         "karma-jasmine": "^1.0.2",
         "karma-phantomjs-launcher": "^1.0.1",
         "load-grunt-tasks": "^3.5.0",
-        "matchdep": "^1.0.1",
+        "matchdep": "^2.0.0",
         "phantomjs-prebuilt": "2.1.7"
     },
     "scripts": {
