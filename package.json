@@ -31,7 +31,7 @@
         "grunt": "^1.0.1",
         "grunt-bump": "^0.8.0",
         "grunt-contrib-uglify": "^2.0.0",
-        "grunt-karma": "^2.0.0",
+        "grunt-karma": "^4.0.0",
         "grunt-karma-coveralls": "^2.5.4",
         "jasmine-core": "2.4.1",
         "karma": "^1.1.1",
